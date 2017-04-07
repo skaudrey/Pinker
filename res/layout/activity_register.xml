@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/regTextV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="134dp"
+        android:layout_y="38dp"
+        android:text="注册" />
+
+    <TextView
+        android:id="@+id/regTelTextV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="7dp"
+        android:layout_y="84dp"
+        android:text="手机号：" />
+
+    <TextView
+        android:id="@+id/regUsernamTextV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="124dp"
+        android:text="用户名：" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_x="87dp"
+        android:layout_y="255dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/regPassword2EditT"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_x="78dp"
+        android:layout_y="212dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/regSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="116dp"
+        android:layout_y="332dp"
+        android:text="提交" />
+
+    <TextView
+        android:id="@+id/regVcodeTextV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="5dp"
+        android:layout_y="272dp"
+        android:text="短信验证码：" />
+
+    <TextView
+        android:id="@+id/regPassword2TextV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="4dp"
+        android:layout_y="227dp"
+        android:text="密码确认：" />
+
+    <TextView
+        android:id="@+id/regPasswordTextV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="182dp"
+        android:text="密码：" />
+
+    <Button
+        android:id="@+id/regMessageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="226dp"
+        android:layout_y="250dp"
+        android:text="短信认证" />
+
+    <EditText
+        android:id="@+id/regTelEditT"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_x="82dp"
+        android:layout_y="77dp"
+        android:ems="11"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/regUsernameEditT"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_x="85dp"
+        android:layout_y="122dp"
+        android:ems="10"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/regPasswordEditT"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_x="91dp"
+        android:layout_y="173dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+</AbsoluteLayout>

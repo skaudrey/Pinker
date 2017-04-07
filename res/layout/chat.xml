@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/chatbg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="#1ab3eb" >
+
+        <ImageButton
+            android:id="@+id/btback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btback" />
+
+        <TextView
+            android:id="@+id/chatTitle"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.69"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="25.0sp" />
+
+        <ImageButton
+            android:id="@+id/btuser"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dip"
+            android:background="@android:color/transparent"
+            android:src="@drawable/frienduser" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent">
+         
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text=" 确定与此人拼车吗？"
+            android:textSize="24sp" />
+        
+        <RadioGroup 
+            android:id="@+id/radioGroup" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/radiofalse">
+
+            <RadioButton
+                android:id="@+id/radiotrue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是" />
+         
+            <RadioButton
+               android:id="@+id/radiofalse"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="否" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:max="100"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="234dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.34"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#ebeced" >
+
+        <ImageButton
+            android:id="@+id/btfaceswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/facebtn" />
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="2dip"
+            android:layout_weight="0.47"
+            android:background="#F0F8FF"
+            android:ems="10"
+            android:hint="聊天内容输入"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:textColor="#000000"
+            android:textSize="24sp" >
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btsend"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:text="发送"
+            android:textColor="#000000"
+            android:textSize="20.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/face_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff0f0f0"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:visibility="gone" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/face_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="#0000"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+
+        <com.example.pinker.chatinfo.CirclePageIndicator
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip" />
+    </LinearLayout>
+    
+</LinearLayout>

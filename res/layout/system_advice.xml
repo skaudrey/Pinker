@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+     
+    <RelativeLayout
+         android:id="@+id/top_container"
+         android:layout_width="fill_parent"
+         android:layout_height="48dp"
+         android:background="#031216" >
+
+         <ImageButton
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btback" />
+
+         <TextView
+             android:id="@+id/Title"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_weight="0.69"
+             android:gravity="center"
+             android:text="用户评价"
+             android:textColor="#b1b1b1"
+             android:textSize="25.0sp" />
+
+     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_container"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Pinker软件旨在帮助广大用户解决打车难问题。\n你的反馈是我们努力的动力！\n快给我们打个分吧！"
+        android:textSize="20sp" />
+
+    <RatingBar
+        android:id="@+id/rb_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:max="100"
+        android:numStars="5"
+        android:progress="100"
+        android:stepSize="0.5" />
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_advice"
+        android:layout_centerHorizontal="true"
+        android:text="提交" />
+
+    <EditText
+        android:id="@+id/et_advice"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rb_rating"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical|top"
+        android:hint="快来填写你宝贵的意见吧" >
+
+        <requestFocus />
+    </EditText>
+    
+</RelativeLayout>
+

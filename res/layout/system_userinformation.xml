@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top" >
+
+    <RelativeLayout
+        android:id="@+id/top_container"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="#031216" >
+
+        <ImageButton
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btback" />
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.69"
+            android:gravity="center"
+            android:text="个人信息"
+            android:textColor="#b1b1b1"
+            android:textSize="25.0sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        style="@style/textviewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:text="用户名" />
+    
+	   <EditText
+	       android:id="@+id/editTextUsername"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignTop="@+id/textViewUsername"
+	       android:layout_toRightOf="@+id/textViewBirth"
+	       android:background="@null"
+	       android:editable="false"
+	       android:ems="10" />
+
+    <TextView
+        android:id="@+id/textViewPhonenumber"
+        style="@style/textviewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="120dp"
+        android:text="手机号" />
+
+    <EditText
+        android:id="@+id/editTextPhonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewPhonenumber"
+        android:layout_alignLeft="@+id/editTextUsername"
+        android:layout_alignTop="@+id/textViewPhonenumber"
+        android:background="@null"
+        android:editable="false"
+        android:ems="12" />
+
+    <TextView
+        android:id="@+id/textViewGender"
+        style="@style/textviewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="170dp"
+        android:text="性别" />
+    
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="170dp">
+        
+	    <RadioButton
+	        android:id="@+id/radioButtonMan"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="男"
+	        android:textSize="20.0sp" />
+	
+	    <RadioButton
+	        android:id="@+id/radioButtonWoman"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="40dp"
+	        android:text="女"
+	        android:textSize="20.0sp" />
+    
+    </RadioGroup>
+    
+    <TextView
+	       android:id="@+id/textViewContactphonenumber"
+	       style="@style/textviewStyle"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignLeft="@+id/textViewBirth"
+	       android:layout_below="@+id/textViewBirth"
+	       android:layout_marginTop="29dp"
+	       android:text="联系人号码" />
+
+    <EditText
+        android:id="@+id/editTextContactphonenumber"
+        style="@style/edittextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewContactphonenumber"
+        android:layout_alignLeft="@+id/buttonSave"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textViewContactphonenumber"
+        android:ems="12" />
+
+    <EditText
+        android:id="@+id/editTextSignature"
+        style="@style/edittextStyle"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_alignRight="@+id/editTextContactphonenumber"
+        android:layout_alignTop="@+id/textViewSignature"
+        android:gravity="center_vertical|top" />
+    
+    <TextView
+       android:id="@+id/textViewBirth"
+       style="@style/textviewStyle"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/textViewGender"
+       android:layout_below="@+id/radioGroup"
+       android:layout_marginTop="19dp"
+       android:text="出生日期" />
+  
+      
+	   <Button
+	        android:id="@+id/buttonSave"
+	        style="@style/buttonStyle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginBottom="10dp"
+	        android:text="保存" />
+
+	   
+
+	   <TextView
+	       android:id="@+id/textViewbirth"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_above="@+id/textViewContactphonenumber"
+	       android:layout_alignRight="@+id/radioGroup"
+	       android:layout_alignTop="@+id/textViewBirth"
+	       android:layout_toRightOf="@+id/textViewContactphonenumber"
+	       android:text="  " />
+
+	   <Button
+	       android:id="@+id/buttonSetBirth"
+	       style="?android:attr/buttonStyleSmall"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_above="@+id/textViewContactphonenumber"
+	       android:layout_alignParentRight="true"
+	       android:layout_below="@+id/radioGroup"
+	       android:text="设置" />
+
+
+	   <TextView
+	       android:id="@+id/textViewSignature"
+	       style="@style/textviewStyle"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignLeft="@+id/textViewContactphonenumber"
+	       android:layout_below="@+id/textViewContactphonenumber"
+	       android:layout_marginTop="20dp"
+	       android:text="个性签名" />
+
+</RelativeLayout>

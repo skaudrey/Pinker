@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/AccessOwnRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/AccessOwnImageV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/AccessOwnStartPTextV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/AccessOwnImageV"
+            android:text="起点:"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/AccessOwnStartPEditT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/AccessOwnStartPTextV"
+            android:layout_toRightOf="@+id/AccessOwnStartPTextV"
+            android:maxLength="15"
+            android:ems="15"
+            android:editable="false"
+            android:textSize="20sp">
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/AccessOwnEndPTextV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AccessOwnStartPTextV"
+             android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/AccessOwnImageV"
+            android:layout_marginLeft="20dp"
+            android:text="终点:" />
+        <EditText
+            android:id="@+id/AccessOwnEndPEditT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/AccessOwnEndPTextV"
+            android:layout_toRightOf="@+id/AccessOwnEndPTextV"
+            android:maxLength="15"
+            android:ems="15"
+            android:editable="false"
+            android:textSize="20sp">
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/AccessUserListVRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/AccessOwnRelativeLayout"
+        android:layout_marginTop="10dp" >
+
+        <ListView
+            android:id="@+id/AccessUserListV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+        </ListView>        
+    </LinearLayout>
+   
+</RelativeLayout>

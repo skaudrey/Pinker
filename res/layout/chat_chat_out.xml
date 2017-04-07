@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/formclient_row_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textSize="15.0sp" />
+
+        <TextView
+            android:id="@+id/formclient_row_userid"
+            android:layout_below="@id/formclient_row_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:gravity="right"
+            android:textColor="#FF666666"
+            android:textSize="10.0sp" />
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/formclient_row_userid"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+         <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/balloon_r_selector"
+            android:clickable="true"
+            android:minHeight="44.0dip" >
+
+            <TextView
+                android:id="@+id/formclient_row_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:maxWidth="150dp"
+                android:textColor="@color/color_bai"
+                android:textSize="20.0sp" 
+                android:singleLine="false" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="7.0dip"
+                android:layout_alignBottom="@id/formclient_row_msg"
+                android:layout_alignLeft="@id/formclient_row_msg"
+                android:layout_alignRight="@id/formclient_row_msg"
+                android:layout_marginBottom="3.0dip"
+                android:layout_marginLeft="4.0dip"
+                android:layout_marginRight="4.0dip"
+                android:max="100"
+                android:visibility="gone"
+                android:progressDrawable="@drawable/progress_receivepic" />
+        </RelativeLayout>
+         
+         <ImageView
+             android:id="@+id/imageView1"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_gravity="top"
+             android:background="@drawable/head_portrait"
+             android:scaleType="fitXY"/>
+     </LinearLayout>
+
+</RelativeLayout>

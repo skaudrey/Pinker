@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/textviewStyle"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="安全确认服务" />
+
+    <TextView
+        android:id="@+id/textViewWarning"
+        style="@style/textviewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:singleLine="false"
+        android:text="    提示：本服务是在拼车时间内通过向您推送消息的方式确认安全，收到推送后，您需要在三分钟之内点击确认并正确输入密码，否则将向您的联系人发送短信。为避免给您造成困扰，请谨慎选择。" />
+
+    <TextView
+        android:id="@+id/textViewContactPhonenumber"
+        style="@style/textviewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewWarning"
+        android:layout_centerVertical="true"
+        android:text="联系人号码" />
+
+    <EditText
+        android:id="@+id/editTextContactphonenumber"
+        style="@style/edittextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewContactPhonenumber"
+        android:layout_alignBottom="@+id/textViewContactPhonenumber"
+        android:layout_alignRight="@+id/textViewWarning"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewContactPhonenumber"
+        android:digits="1234567890"
+        android:ems="11"> 
+        <requestFocus />
+        </EditText>
+    
+
+    <TextView
+        android:id="@+id/textViewInterval"
+        style="@style/textviewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewContactPhonenumber"
+        android:layout_below="@+id/textViewContactPhonenumber"
+        android:layout_marginTop="35dp"
+        android:text="推送时间间隔" />
+
+    <EditText
+        android:id="@+id/editTextInterval"
+        style="@style/edittextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewInterval"
+        android:layout_alignBottom="@+id/textViewInterval"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/textViewInterval"
+        android:ems="3" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewMin"
+        style="@style/textviewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextInterval"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/editTextInterval"
+        android:text="分钟" />
+
+    <TextView
+        android:id="@+id/textViewSafePSW"
+        style="@style/textviewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewInterval"
+        android:layout_below="@+id/textViewInterval"
+        android:layout_marginTop="41dp"
+        android:text="密码" />
+
+    <EditText
+        android:id="@+id/editTextSafePSW"
+        style="@style/edittextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewSafePSW"
+        android:layout_alignBottom="@+id/textViewSafePSW"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/textViewSafePSW"
+        android:digits="1234567890"
+        android:ems="4"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textViewPSWWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextSafePSW"
+        android:layout_below="@+id/editTextSafePSW"
+        android:layout_marginTop="16dp"
+        android:text="提示：该密码为一个四位数字" />
+
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPSWWarning"
+        android:layout_marginTop="18dp"
+        android:layout_toLeftOf="@+id/editTextInterval"
+        android:text="确认开启" />
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonOK"
+        android:layout_alignBottom="@+id/buttonOK"
+        android:layout_marginLeft="31dp"
+        android:layout_toRightOf="@+id/editTextSafePSW"
+        android:text="取消" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextInterval"
+        android:layout_below="@+id/editTextInterval"
+        android:layout_marginTop="5dp"
+        android:text="提示：默认间隔为三十分钟" />
+
+</RelativeLayout>

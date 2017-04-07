@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#031216"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bt_user"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="个人管理" 
+        android:textColor="#ffffff"/>
+    
+    <Button
+        android:id="@+id/bt_advice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="帮助与反馈" 
+        android:textColor="#ffffff"/>
+    
+    <Button
+        android:id="@+id/bt_exit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="退出" 
+        android:textColor="#ffffff"/>
+</LinearLayout>
+

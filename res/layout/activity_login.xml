@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+     <RelativeLayout
+        android:id="@+id/LoginSpaceRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+         >
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/LoginPersonRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"        
+        android:layout_below="@+id/LoginSpaceRelativeLayout"
+         >
+         <EditText
+        android:id="@+id/loginUsernameOrTelEditT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:phoneNumber="true"      
+        android:ems="11"
+        
+        android:inputType="textPersonName"        
+        android:hint="用户名/手机号" 
+        android:layout_centerHorizontal="true"/>
+          <EditText
+        android:id="@+id/loginPasswordEditT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginUsernameOrTelEditT"
+        
+        android:layout_marginTop="20dp"
+        android:ems="11"
+        android:hint="密码(6-11位英文及数字)"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true" />
+
+          <Button
+              android:id="@+id/loginForgetPassWButton"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignRight="@+id/loginPasswordEditT"
+              android:layout_below="@+id/loginPasswordEditT"
+              android:text="忘记密码"
+              android:textSize="10sp" />
+         
+    </RelativeLayout>
+    
+    <RelativeLayout
+         android:id="@+id/LoginLoginRelativeLayout"
+         android:layout_width="fill_parent"
+         android:layout_height="70dp"
+         android:layout_below="@+id/LoginPersonRelativeLayout">
+
+         <CheckBox
+             android:id="@+id/logautolog"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true"
+             android:layout_marginRight="43dp"
+             android:text="自动登录" />
+
+         <CheckBox
+             android:id="@+id/logrememberpwd"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_marginRight="20dp"
+             android:layout_toLeftOf="@+id/logautolog"
+             android:text="记住密码" />
+             
+      </RelativeLayout>
+ 	
+     <RelativeLayout
+         android:id="@+id/LoginElseRelativeLayout"
+         android:layout_width="fill_parent"
+         android:layout_height="100dp"
+         android:layout_below="@+id/LoginLoginRelativeLayout">
+
+         <Button
+             android:id="@+id/loginLoginButton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true"
+             android:layout_marginRight="54dp"
+             android:text="登录"
+             android:textSize="20sp" />
+
+         <Button
+             android:id="@+id/loginRegisterButton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:layout_marginLeft="48dp"
+             android:text="注册" />
+
+   </RelativeLayout>
+    
+</RelativeLayout>
